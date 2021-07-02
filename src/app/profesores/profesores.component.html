@@ -1,1 +1,27 @@
-<p>profesores works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Image </th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Patronus</th>
+                        <th scope="col">Age </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listaProfesores">
+
+                        <td><img [src]="item.image" class="rounded-circle" alt="Eniun"
+                                style="width:60px;height:60px;"></td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.patronus}}</td>
+                        <td>{{item.Age}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
