@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { CasaHechiceriaComponent } from './casa-hechiceria/casa-hechiceria.component';
 import { SeccionesComponent } from './secciones/secciones.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 
 
 const routes: Routes = [
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'secciones', component: SeccionesComponent },
   { path: 'inicio', component: InicioComponent },
   { path: 'casas', component: CasaHechiceriaComponent },
+  { path: 'profesores', component: ProfesoresComponent },
+  { path: 'estudiantes', component: EstudiantesComponent },
 
 ];
 

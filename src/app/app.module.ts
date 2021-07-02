@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InicioComponent } from './inicio/inicio.component';
 import { SeccionesComponent } from './secciones/secciones.component';
+import { PlantillaComponent } from './plantilla/plantilla.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { SeccionesComponent } from './secciones/secciones.component';
     CasaHechiceriaComponent,
     InicioComponent,
     SeccionesComponent,
+    PlantillaComponent,
+    ProfesoresComponent,
+    EstudiantesComponent,
     
   ],
   imports: [
