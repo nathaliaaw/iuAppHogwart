@@ -1,1 +1,74 @@
-<p>estudiantes works!</p>
+<!-- modal -->
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Datos de nueva solicitud!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <form action="" [formGroup]="formSolicitud">
+        <div class="modal-body">
+
+            <label>Nombre y Apellido</label>
+            <input type="text" class="form-control" formControlName="nombresApellidos" [(ngModel)]="nombresApellidos"
+                name="nombresApellidos">
+            <label>Edad</label>
+
+            <input type="text" class="form-control" [maxDate]="maxDate" placeholder="Datepicker"
+                [bsConfig]="{containerClass:'theme-default'}" formControlName="edad" [(ngModel)]="edad" name="edad"
+                [bsConfig]="{dateInputFormat: 'DD-MM-YYYY'}" bsDatepicker>
+
+            <label>Patronus</label>
+            <input type="text" class="form-control" formControlName="patronus" [(ngModel)]="patronus" name="patronus">
+            <label>URL Foto</label>
+            <input type="text" class="form-control" formControlName="urlFoto" [(ngModel)]="urlFoto" name="urlFoto">
+        </div>
+    </form>
+    <div class="alert alert-danger" *ngIf="formSolicitud.invalid">{{errorModal}}</div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="guardarInfo(content)">Guardar</button>
+    </div>
+</ng-template>
+
+<div class="d-flex flex-row-reverse">
+    <button class="btn btn-lg btn-outline-primary p-2" (click)="open(content)">Crear una nueva Solicitud</button>
+</div>
+<!-- tablas -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 d-flex">
+            <div class="col-md-2 top-login"></div>
+            <div class="col-md-6 align-items-center">
+                <div>
+                    <h4>
+                        Colegio Hogwarts de Magia y Hechicería
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-2 "></div>
+        </div>
+        <div class="col-md-12" *ngIf="listaPersonajes?.length>0">
+            <div class=" col-md-12 top-login">
+                <table class="table table-hover table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Foto </th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Patronus</th>
+                            <th scope="col">Edad </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of listaPersonajes">
+                            <td><img [src]="item.image" class="rounded-circle" alt="Eniun"
+                                    style="width:60px;height:60px;"></td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.patronus}}</td>
+                            <td>{{item.Age}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

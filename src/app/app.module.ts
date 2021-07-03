@@ -13,7 +13,8 @@ import { SeccionesComponent } from './secciones/secciones.component';
 import { PlantillaComponent } from './plantilla/plantilla.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { EstudiantesComponent } from './estudiantes/estudiantes.component';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EstudiantesComponent } from './estudiantes/estudiantes.component';
     BrowserModule,ReactiveFormsModule,
     FormsModule , NgbModule,
     HttpClientModule,
-       
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
     
   ],
   providers: [],

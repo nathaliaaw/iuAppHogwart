@@ -7,10 +7,8 @@ import * as moment from 'moment';
   templateUrl: './casa-hechiceria.component.html',
   styleUrls: ['./casa-hechiceria.component.css']
 })
-export class CasaHechiceriaComponent implements OnInit {
-  formLogin: FormGroup;
-  casa: string = ''
-  clave: string = ''
+export class CasaHechiceriaComponent implements OnInit {  
+  casa: string = ''  
   listaPersonajes: any = []
 
 
@@ -18,12 +16,7 @@ export class CasaHechiceriaComponent implements OnInit {
   constructor(private http: HttpClient,) { }
 
   ngOnInit(): void {
-    // this.consumirAPI();
-
-    this.formLogin = new FormGroup({
-      casa: new FormControl('', [Validators.required]),
-      clave: new FormControl('', [Validators.required]),
-    })
+ 
   }
   consumirAPI() {    
     this.http.get('https://hp-api.herokuapp.com/api/characters/house/' + this.casa).subscribe(

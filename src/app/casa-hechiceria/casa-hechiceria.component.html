@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12 "> 
+        <div class="col-md-12 ">
             <div class="offset-md-4 col-md-4 top-login"></div>
             <div class="offset-md-4 col-md-4 top-login">
                 <div>
@@ -8,23 +8,18 @@
                         Colegio Hogwarts de Magia y Hechicería
                     </h4>
                 </div>
-                <form action="" [formGroup]="formLogin">
-                    <div>
-                        <label>Seleccione una casa de Hogwart</label>
-                        <select formControlName="casa" name="casa" [(ngModel)]="casa" class="form-control"
-                            (change)="consumirAPI()">
-                            <option value="">Seleccione</option>
-                            <option value="Ravenclaw">Ravenclaw </option>
-                            <option value="Hufflepuff">Hufflepuff</option>
-                            <option value="Gryffindor">Gryffindor</option>
-                            <option value="Slytherin">Slytherin</option>
-                        </select>
-                    </div>
-
-                </form>
+                <div>
+                    <label>Seleccione una casa de Hogwart</label>
+                    <select [(ngModel)]="casa" class="form-control" (change)="consumirAPI()">
+                        <option value="">Seleccione</option>
+                        <option value="Ravenclaw">Ravenclaw </option>
+                        <option value="Hufflepuff">Hufflepuff</option>
+                        <option value="Gryffindor">Gryffindor</option>
+                        <option value="Slytherin">Slytherin</option>
+                    </select>
+                </div>
             </div>
             <div class="offset-md-4 col-md-4 top-login"></div>
-
         </div>
         <div class="col-md-12" *ngIf="listaPersonajes?.length>0">
             <div class=" col-md-12 top-login">
@@ -51,6 +46,5 @@
                 </table>
             </div>
         </div>
-
     </div>
 </div>
