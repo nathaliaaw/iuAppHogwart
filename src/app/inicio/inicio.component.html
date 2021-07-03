@@ -1,1 +1,22 @@
-<p>inicio works!</p>
+<div id="templatemo_wrapper">
+    <span class="bg_top"></span>
+    <span class="bg_bottom"></span>
+    <div id="templatemo_menu">
+        <ul>
+            <li><a (click)="navegar('secciones')">Inicio</a></li>
+            <li><a (click)="navegar('casas')">Personajes</a></li>
+            <li><a (click)="navegar('estudiantes')">Estudiantes</a></li>
+            <li><a (click)="navegar('profesores')">Profesores</a></li>
+        </ul>
+    </div>
+    <div id="templatemo_main">
+        <div class="cbox_fw">
+            <router-outlet name="contenedorPrincipal"></router-outlet>
+          
+        </div>
+        <div class="cleaner"></div>
+    </div>
+    <div id="templatemo_main_bottom"></div>
+
+
+</div>

@@ -38,8 +38,7 @@ export class EstudiantesComponent implements OnInit {
     this.http.get('http://hp-api.herokuapp.com/api/characters/students').subscribe(
       (data: Array<any>) => {
         this.listaPersonajes = data;
-        this.calcularEdad()
-        console.log(data);
+        this.calcularEdad()        
       }, error => {
         console.log(error);
       });
@@ -59,13 +58,10 @@ export class EstudiantesComponent implements OnInit {
     });
   }
   guardarInfo(content) {
-    if (this.formSolicitud.invalid) {
-      // this.servicioGeneral.MostrarModal('Error', ' Por favor ingresar todos los datos', 'error', 'Aceptar')
+    if (this.formSolicitud.invalid) {      
       return;
     }
-
-    var objeto: any = []
-    console.log((moment(this.formSolicitud.value.edad, "DD-MM-YYYY")))
+    var objeto: any = []   
 
     objeto = {
       name: this.formSolicitud.value.nombresApellidos,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioGeneralService } from '../servicios/servicio-general.service';
 
 @Component({
   selector: 'app-secciones',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secciones.component.css']
 })
 export class SeccionesComponent implements OnInit {
-
-  constructor() { }
+  imagesrc = '../assets/images/gif_escudo.gif';
+  constructor(private servicioGenral:ServicioGeneralService) { }
 
   ngOnInit(): void {
   }
+  
 
 }

@@ -31,21 +31,13 @@
 </ng-template>
 
 <div class="d-flex flex-row-reverse">
-    <button class="btn btn-lg btn-outline-primary p-2" (click)="open(content)">Crear una nueva Solicitud</button>
+    <button class="btn btn-lg btn btn-outline-dark p-2" (click)="open(content)">Crear una nueva Solicitud</button>
 </div>
 <!-- tablas -->
 <div class="container">
     <div class="row">
         <div class="col-md-12 d-flex">
-            <div class="col-md-2 top-login"></div>
-            <div class="col-md-6 align-items-center">
-                <div>
-                    <h4>
-                        Colegio Hogwarts de Magia y Hechicería
-                    </h4>
-                </div>
-            </div>
-            <div class="col-md-2 "></div>
+            <h2>Estudiantes</h2>
         </div>
         <div class="col-md-12" *ngIf="listaPersonajes?.length>0">
             <div class=" col-md-12 top-login">

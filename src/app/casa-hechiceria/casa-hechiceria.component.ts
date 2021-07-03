@@ -29,8 +29,7 @@ export class CasaHechiceriaComponent implements OnInit {
           else {
             element.Age = ''
           }
-        });
-        console.log(data);
+        });        
       }, error => {
         console.log(error);
       });

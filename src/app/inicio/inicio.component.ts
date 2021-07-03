@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicioGeneralService } from '../servicios/servicio-general.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  constructor(public servicioGenral: ServicioGeneralService) { }
 
   ngOnInit(): void {
+    this.navegar('secciones')
+
+  }
+  navegar(path) {
+    this.servicioGenral.NavegarMenuRouter(path)
   }
 
 }
