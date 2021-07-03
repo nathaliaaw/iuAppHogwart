@@ -16,8 +16,7 @@ export class ServicioGeneralService {
           contenedorPrincipal: path
         }
       }
-    ])
-    console.log(this._router.url)
+    ])    
   }
 
 }
